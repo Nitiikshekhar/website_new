@@ -1,4 +1,4 @@
-/* still. — demo storefront logic */
+/* still. — Editorial (web_1) storefront logic */
 
 const PRODUCTS = [
   { id: "magnesium", name: "Magnesium", sub: "Evening powder", cat: "sleep", price: 32, type: "jar", body: "#9fae8f", cap: "#4a3527",
@@ -20,7 +20,8 @@ const PRODUCTS = [
 ];
 
 /* Optional per-design overrides: a page can set window.STORE_THEME = { colors: { id: [body, cap] }, ink: [light, dark] } */
-const THEME = window.STORE_THEME || {};
+/* This design's settings: product layout, product colours, label ink */
+const THEME = {"layout": "list", "colors": {"magnesium": ["#d9b49a", "#3a2a20"], "ashwagandha": ["#b5562f", "#3a2a20"], "collagen": ["#f5ece0", "#b5562f"], "body-oil": ["#8a5a3c", "#3a2a20"], "matcha": ["#7d8150", "#f5ece0"], "turmeric": ["#d08a3e", "#3a2a20"], "sleep-tea": ["#c9a88c", "#6b7045"], "face-oil": ["#a2492b", "#3a2a20"]}, "ink": ["#fff8f0", "#3a2a20"]};
 PRODUCTS.forEach((p) => { const c = THEME.colors && THEME.colors[p.id]; if (c) [p.body, p.cap] = c; });
 const INK = THEME.ink || ["#f7f3ec", "#2e2119"];
 
@@ -302,3 +303,6 @@ $("#newsForm").addEventListener("submit", (e) => {
 $("#year").textContent = new Date().getFullYear();
 renderGrid();
 renderCart();
+
+/* Remember the last design viewed, for the landing page */
+try { localStorage.setItem("still-last-design", "web_1"); } catch (e) {}

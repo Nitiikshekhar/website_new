@@ -8,9 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../minimal/styles.css" />
-  <link rel="stylesheet" href="layout.css" />
-  <link rel="stylesheet" href="mughal.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="ga-nav" id="nav">
@@ -76,9 +74,9 @@
 
   <!--SWITCHER-->
   <nav class="switcher" aria-label="Design options">
-    <a href="../min2/index.html" aria-label="Previous design">‹</a>
-    <a class="switcher__label" href="../designs.html">Gallery <span>4/6</span></a>
-    <a href="../min4/index.html" aria-label="Next design">›</a>
+    <a href="../web_2/index.html" aria-label="Previous design">‹</a>
+    <a class="switcher__label" href="../index.html">Gallery · Mughal garden <span>3/5</span></a>
+    <a href="../web_4/index.html" aria-label="Next design">›</a>
   </nav>
   <!--/SWITCHER-->
 
@@ -105,14 +103,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script>window.STORE_THEME = {"layout": "grid", "colors": {"magnesium": ["#fbf8f5", "#2f4b3a"], "ashwagandha": ["#2f4b3a", "#c9a24b"], "collagen": ["#e2b9ac", "#2f4b3a"], "body-oil": ["#c98f84", "#2f4b3a"], "matcha": ["#6f8f6a", "#fbf8f5"], "turmeric": ["#c9a24b", "#2f4b3a"], "sleep-tea": ["#d9b7ae", "#6f8f6a"], "face-oil": ["#a8665c", "#2f4b3a"]}, "ink": ["#fbf8f5", "#22362a"]};</script>
-  <script src="../minimal/app.js"></script>
-  <script>
-    document.querySelectorAll("[data-scroll]").forEach((b) => b.addEventListener("click", () => {
-      const track = document.getElementById("grid"), card = track.querySelector(".card");
-      const step = card ? card.getBoundingClientRect().width + 24 : 320;
-      track.scrollBy({ left: step * Number(b.dataset.scroll), behavior: "smooth" });
-    }));
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
