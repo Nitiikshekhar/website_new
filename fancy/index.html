@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurum &amp; Sage — Natural Botanical Wellness</title>
+  <meta name="description" content="Aurum & Sage — wild-harvested, small-batch botanical wellness, bottled in amber glass. (Demo store)" />
+  <meta name="theme-color" content="#1f1510" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-loading">
+  <!-- Intro curtain -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__mark">Aurum <em>&amp;</em> Sage</span>
+      <span class="loader__line"></span>
+      <span class="loader__tag">Pure botanicals · Est. 2026</span>
+    </div>
+  </div>
+
+  <!-- Reusable ornaments -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="sprig" viewBox="0 0 120 220">
+        <path pathLength="1" d="M60 216 C 58 170, 62 120, 60 8" />
+        <path pathLength="1" d="M60 180 C 40 176, 26 160, 22 140 C 42 144, 56 158, 60 180 Z" />
+        <path pathLength="1" d="M60 150 C 80 146, 94 130, 98 110 C 78 114, 64 128, 60 150 Z" />
+        <path pathLength="1" d="M60 118 C 42 114, 30 100, 27 82 C 45 86, 57 99, 60 118 Z" />
+        <path pathLength="1" d="M60 88 C 76 84, 88 71, 91 55 C 75 58, 63 70, 60 88 Z" />
+        <path pathLength="1" d="M60 60 C 47 56, 38 45, 36 31 C 50 34, 58 45, 60 60 Z" />
+        <path pathLength="1" d="M60 36 C 70 32, 76 22, 77 10 C 67 13, 61 23, 60 36 Z" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="announce">
+    <p>Complimentary shipping on orders over $75 <span class="announce__dot">✦</span> <em>Demo store — no real orders</em></p>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#shop">Shop</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#rituals">Rituals</a>
+        <a href="#ingredients">Ingredients</a>
+      </nav>
+      <a href="#top" class="logo">Aurum <em>&amp;</em> Sage</a>
+      <div class="nav__actions">
+        <a href="#newsletter" class="nav__text">Join the circle</a>
+        <button class="bag-btn" data-open-cart aria-label="Open bag">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M5 8h14l-1.2 12.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="bag-count" data-cart-count>0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero__spot" aria-hidden="true"></div>
+      <svg class="sprig sprig--hero" aria-hidden="true"><use href="#sprig" /></svg>
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow reveal"><span class="eyebrow__line"></span>Pure botanicals · Est. 2026</p>
+          <h1 class="hero__title reveal">Pure by <em>nature</em>.<br />Refined by ritual.</h1>
+          <p class="hero__lead reveal">Wild-harvested botanicals, cold-pressed oils and slow-steeped blends — sealed in amber glass and finished by hand, in small batches.</p>
+          <div class="hero__cta reveal">
+            <a href="#shop" class="btn btn--amber">Explore the collection</a>
+            <a href="#philosophy" class="btn btn--line">Our philosophy</a>
+          </div>
+          <div class="hero__proof reveal">
+            <div><strong>100%</strong><span>Natural origin</span></div>
+            <div><strong>4.9</strong><span>From 2,400 reviews</span></div>
+            <div><strong>0</strong><span>Synthetic fragrance</span></div>
+          </div>
+        </div>
+        <div class="hero__art" id="heroArt" aria-hidden="true">
+          <div class="halo"></div>
+          <div class="ring ring--1"></div>
+          <div class="ring ring--2"></div>
+          <div class="plinth"></div>
+        </div>
+      </div>
+      <a href="#philosophy" class="scroll-cue" aria-label="Scroll to next section"><span>Scroll</span><i></i></a>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>100% natural</span><i>✦</i><span>Wild harvested</span><i>✦</i><span>Cold pressed</span><i>✦</i><span>Small batch</span><i>✦</i><span>Amber glass</span><i>✦</i><span>Plastic free</span><i>✦</i>
+        <span>100% natural</span><i>✦</i><span>Wild harvested</span><i>✦</i><span>Cold pressed</span><i>✦</i><span>Small batch</span><i>✦</i><span>Amber glass</span><i>✦</i><span>Plastic free</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- Philosophy -->
+    <section class="section philosophy" id="philosophy">
+      <div class="wrap philosophy__inner">
+        <svg class="sprig sprig--small reveal" aria-hidden="true"><use href="#sprig" /></svg>
+        <p class="eyebrow eyebrow--center eyebrow--dark reveal">Our philosophy</p>
+        <h2 class="philosophy__quote reveal">“The finest things grow <em>slowly</em>. We simply wait for them, gather them gently, and bottle them with care.”</h2>
+        <p class="philosophy__sign reveal">— The founders of Aurum &amp; Sage</p>
+        <div class="pillars">
+          <div class="pillar reveal"><span class="pillar__num">I</span><h3>Grown</h3><p>Organic and wild-harvested botanicals from farms we know by name.</p></div>
+          <div class="pillar reveal"><span class="pillar__num">II</span><h3>Gathered</h3><p>Picked by hand at peak potency, in rhythm with the seasons.</p></div>
+          <div class="pillar reveal"><span class="pillar__num">III</span><h3>Crafted</h3><p>Cold-pressed and blended in small batches, then sealed in amber glass.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections -->
+    <section class="section collections">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__line"></span>The collections</p>
+          <h2 class="section__title">Find your <em>ritual</em></h2>
+        </div>
+        <div class="collections__grid">
+          <button class="collection reveal" data-jump="mind" style="--c1:#3e4a38;--c2:#a9b79a"><span class="collection__num">I</span><span class="collection__name">Mind</span><span class="collection__desc">Focus &amp; calm</span></button>
+          <button class="collection reveal" data-jump="sleep" style="--c1:#2b1e16;--c2:#8a6a52"><span class="collection__num">II</span><span class="collection__name">Sleep</span><span class="collection__desc">Rest &amp; unwind</span></button>
+          <button class="collection reveal" data-jump="body" style="--c1:#5a3412;--c2:#e5a552"><span class="collection__num">III</span><span class="collection__name">Body</span><span class="collection__desc">Balance &amp; restore</span></button>
+          <button class="collection reveal" data-jump="beauty" style="--c1:#4a3426;--c2:#c9a27a"><span class="collection__num">IV</span><span class="collection__name">Beauty</span><span class="collection__desc">Glow from within</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section class="section shop" id="shop">
+      <div class="wrap">
+        <div class="shop__head">
+          <div class="reveal">
+            <p class="eyebrow eyebrow--dark"><span class="eyebrow__line"></span>The apothecary</p>
+            <h2 class="section__title">Natural <em>essentials</em></h2>
+          </div>
+          <div class="shop__controls reveal">
+            <div class="tabs" id="tabs" role="tablist" aria-label="Filter by collection"></div>
+            <label class="sort">
+              <span class="sr-only">Sort products</span>
+              <select id="sort">
+                <option value="featured">Featured</option>
+                <option value="low">Price: low to high</option>
+                <option value="high">Price: high to low</option>
+                <option value="rating">Top rated</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <!-- Signature product -->
+    <section class="section signature" id="signature">
+      <div class="wrap signature__inner">
+        <div class="signature__art reveal" id="sigArt" aria-hidden="true">
+          <div class="halo halo--sig"></div>
+          <div class="plinth plinth--sig"></div>
+        </div>
+        <div class="signature__copy">
+          <p class="eyebrow reveal"><span class="eyebrow__line"></span>The signature</p>
+          <h2 class="section__title reveal">Rose Face <em>Serum</em></h2>
+          <p class="signature__text reveal">Our most treasured formula. Cold-pressed Patagonian rosehip, olive-derived squalane and a single precious drop of Bulgarian rose otto — nothing else, and nothing synthetic.</p>
+          <ul class="sig__list reveal">
+            <li><span>Rosehip seed oil</span><i></i><span>78%</span></li>
+            <li><span>Plant squalane</span><i></i><span>20%</span></li>
+            <li><span>Rose otto &amp; vitamin E</span><i></i><span>2%</span></li>
+          </ul>
+          <div class="sig__buy reveal">
+            <span class="sig__price">$64.00</span>
+            <button class="btn btn--amber" data-add="serum">Add to bag</button>
+            <button class="link" data-view="serum">View details</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rituals -->
+    <section class="section rituals" id="rituals">
+      <div class="wrap">
+        <div class="section__head section__head--center reveal">
+          <p class="eyebrow eyebrow--center">A day, reimagined</p>
+          <h2 class="section__title">The daily <em>ritual</em></h2>
+        </div>
+        <div class="rituals__grid">
+          <article class="ritual reveal">
+            <span class="ritual__time">06:30 · Dawn</span>
+            <h3>Awaken</h3>
+            <p>Whisk a spoon of Morning Matcha into warm oat milk. Breathe for three slow counts before the first sip.</p>
+            <button class="link" data-view="matcha">Morning Matcha →</button>
+          </article>
+          <article class="ritual reveal">
+            <span class="ritual__time">13:00 · Midday</span>
+            <h3>Centre</h3>
+            <p>Two Calm Ritual capsules with lunch to soften the afternoon and keep your focus unhurried.</p>
+            <button class="link" data-view="calm">Calm Ritual →</button>
+          </article>
+          <article class="ritual reveal">
+            <span class="ritual__time">21:30 · Dusk</span>
+            <h3>Unwind</h3>
+            <p>Stir Deep Rest into a cup of Evening Tea, then press Lavender Body Oil into shoulders and wrists.</p>
+            <button class="link" data-view="sleep">Deep Rest →</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ingredients -->
+    <section class="section ingredients" id="ingredients">
+      <div class="wrap ingredients__inner">
+        <div class="ingredients__intro reveal">
+          <p class="eyebrow eyebrow--dark"><span class="eyebrow__line"></span>Sourced with intention</p>
+          <h2 class="section__title">Botanicals, <em>honestly</em> grown.</h2>
+          <p>Every ingredient is traced to the farm it came from, tested by an independent lab, and chosen for how it has been cherished for generations.</p>
+          <a href="#shop" class="btn btn--dark">Explore the apothecary</a>
+        </div>
+        <ul class="ingredients__list">
+          <li class="reveal"><span class="ing__num">01</span><div><h3>Ashwagandha</h3><p>Root extract from Rajasthan, valued in Ayurveda as a grounding adaptogen.</p></div><span class="ing__origin">Rajasthan, IN</span></li>
+          <li class="reveal"><span class="ing__num">02</span><div><h3>Ceremonial Matcha</h3><p>Shade-grown and stone-ground for a smooth, calm kind of energy.</p></div><span class="ing__origin">Uji, JP</span></li>
+          <li class="reveal"><span class="ing__num">03</span><div><h3>French Lavender</h3><p>Steam-distilled at peak bloom each July on high plateaus.</p></div><span class="ing__origin">Provence, FR</span></li>
+          <li class="reveal"><span class="ing__num">04</span><div><h3>Wild Rosehip</h3><p>Cold-pressed from wild hips, naturally rich in vitamin A and fatty acids.</p></div><span class="ing__origin">Patagonia, CL</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials" id="journal">
+      <div class="wrap testimonials__inner">
+        <p class="eyebrow eyebrow--center">Kind words</p>
+        <div class="stars-row" aria-hidden="true">★ ★ ★ ★ ★</div>
+        <div class="quote" id="quote" aria-live="polite">
+          <blockquote id="quoteText"></blockquote>
+          <p class="quote__by" id="quoteBy"></p>
+        </div>
+        <div class="dots" id="dots" role="tablist" aria-label="Choose review"></div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section newsletter" id="newsletter">
+      <div class="newsletter__glow" aria-hidden="true"></div>
+      <div class="wrap newsletter__inner reveal">
+        <svg class="sprig sprig--tiny" aria-hidden="true"><use href="#sprig" /></svg>
+        <h2 class="section__title">Join the <em>circle</em></h2>
+        <p>Seasonal rituals, first access to small harvests, and 10% off your first order.</p>
+        <form class="news-form" id="newsForm" novalidate>
+          <label class="sr-only" for="newsEmail">Email address</label>
+          <input id="newsEmail" type="email" placeholder="Your email address" required autocomplete="email" />
+          <button class="btn btn--amber" type="submit">Subscribe</button>
+        </form>
+        <p class="news-status" id="newsStatus" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div>
+        <a href="#top" class="logo">Aurum <em>&amp;</em> Sage</a>
+        <p class="footer__tag">Botanical rituals, made slowly.</p>
+      </div>
+      <div><h4>Shop</h4><a href="#shop" data-footer-filter="mind">Mind</a><a href="#shop" data-footer-filter="sleep">Sleep</a><a href="#shop" data-footer-filter="body">Body</a><a href="#shop" data-footer-filter="beauty">Beauty</a></div>
+      <div><h4>House</h4><a href="#philosophy">Philosophy</a><a href="#ingredients">Ingredients</a><a href="#rituals">Rituals</a></div>
+      <div><h4>Care</h4><a href="#top">Shipping</a><a href="#top">Returns</a><a href="#top">Contact</a></div>
+    </div>
+    <div class="footer__mark" aria-hidden="true">Aurum &amp; Sage</div>
+    <div class="wrap footer__base">
+      <p>© <span id="year"></span> Aurum &amp; Sage — a fictional demo store.</p>
+      <p class="footer__legal">Product descriptions are illustrative. These products are not intended to diagnose, treat, cure or prevent any disease.</p>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer__head">
+      <h2>Your bag <span class="muted">(<span data-cart-count>0</span>)</span></h2>
+      <button class="icon-x" data-close aria-label="Close bag">✕</button>
+    </div>
+    <div class="ship">
+      <p id="shipText"></p>
+      <div class="ship__bar"><span id="shipBar"></span></div>
+    </div>
+    <div class="drawer__body" id="cartBody"></div>
+    <div class="drawer__foot">
+      <div class="drawer__row"><span>Subtotal</span><strong id="subtotal">$0.00</strong></div>
+      <p class="muted small">Taxes calculated at checkout. Gift-wrapped in linen, always.</p>
+      <button class="btn btn--amber btn--block" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal__panel">
+      <button class="icon-x modal__close" data-close aria-label="Close">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

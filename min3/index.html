@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>still. — Daily wellness essentials</title>
+  <meta name="description" content="still. — a small range of honest wellness essentials for body and mind. (Demo store)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../minimal/styles.css" />
+  <link rel="stylesheet" href="layout.css" />
+  <link rel="stylesheet" href="mughal.css" />
+</head>
+<body>
+  <header class="ga-nav" id="nav">
+    <div class="wrap ga-nav__inner">
+      <nav class="ga-links" aria-label="Primary"><a href="#shop">Shop</a><a href="#about">About</a><a href="#faq">FAQ</a></nav>
+      <a href="#top" class="ga-logo">still.</a>
+      <button class="bag" data-open-cart>Bag (<span data-cart-count>0</span>)</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="ga-hero wrap">
+      <p class="ga-eyebrow">Botanical wellness · Inspired by the Mughal gardens</p>
+      <h1>Daily essentials<br /><em>for body &amp; mind.</em></h1>
+      <div class="ga-circle" id="heroArt" aria-hidden="true"></div>
+      <a href="#shop" class="ga-btn">Shop the collection</a>
+    </section>
+
+    <section class="ga-garden wrap" aria-label="Botanicals we use">
+      <p class="ga-eyebrow">From the royal gardens</p>
+      <ul class="ga-herbs">
+        <li><i class="herb herb--rose" aria-hidden="true"></i><b>Damask rose</b><span>A soothing ritual</span></li>
+        <li><i class="herb herb--saffron" aria-hidden="true"></i><b>Saffron</b><span>A bright morning note</span></li>
+        <li><i class="herb herb--ashwa" aria-hidden="true"></i><b>Ashwagandha</b><span>Grounding &amp; calm</span></li>
+        <li><i class="herb herb--tulsi" aria-hidden="true"></i><b>Tulsi</b><span>Daily balance</span></li>
+        <li><i class="herb herb--sandal" aria-hidden="true"></i><b>Sandalwood</b><span>Evening rest</span></li>
+      </ul>
+    </section>
+
+    <!-- ✏️ ABOUT THE COMPANY — replace the text in the next section with your own story: what the company is and what it provides. -->
+    <section class="ga-sec ga-about wrap" id="about">
+      <span class="ga-orn" aria-hidden="true">✦</span>
+      <p class="ga-eyebrow">About us</p>
+      <h2 class="ga-statement">still. is a small wellness company making simple, natural essentials for everyday calm, rest and care.</h2>
+      <div class="ga-trio">
+        <div><span class="ga-num">i.</span><h3>Who we are</h3><p>Founded in 2026, we are a small team of herbalists, nutritionists and designers who believe wellness shouldn’t be complicated. Every product starts with one question: what does the body actually need?</p></div>
+        <div><span class="ga-num">ii.</span><h3>What we provide</h3><p>Plant-based supplements for focus, calm and sleep · Botanical oils for body and face · Loose-leaf teas and daily powders · Refills in compostable packaging</p></div>
+        <div><span class="ga-num">iii.</span><h3>Our promise</h3><p>Natural ingredients, listed in full on the front of every pack. Independent lab testing on every batch. Free returns within 30 days.</p></div>
+      </div>
+    </section>
+
+    <section class="ga-sec ga-shop" id="shop">
+      <div class="wrap">
+        <p class="ga-eyebrow">The collection</p>
+        <h2 class="ga-h2">Shop</h2>
+        <div class="filters ga-pills" id="filters" role="tablist" aria-label="Filter by category"></div>
+      </div>
+      <div class="ga-track" id="grid"></div>
+      <div class="ga-arrows"><button class="ga-arrow" data-scroll="-1" aria-label="Previous products">←</button><button class="ga-arrow" data-scroll="1" aria-label="Next products">→</button></div>
+    </section>
+
+    <section class="ga-sec wrap ga-faq" id="faq"><p class="ga-eyebrow">Questions</p><h2 class="ga-h2">FAQ</h2><div class="faq__list"><details><summary>How long does shipping take?</summary><p>Orders ship within two working days. Shipping is free over $60.</p></details><details><summary>Can I return a product?</summary><p>Unopened products can be returned within 30 days for a full refund.</p></details><details><summary>Are your products vegan?</summary><p>Everything except Collagen is vegan. Each product page lists its ingredients.</p></details><details><summary>Is this a real store?</summary><p>No — still. is a fictional demo store. No payments are taken and nothing ships.</p></details></div></section>
+
+    <section class="ga-sec wrap ga-news"><h2 class="ga-h2"><em>Notes, occasionally.</em></h2><form class="news__form" id="newsForm" novalidate>
+          <label class="sr-only" for="newsEmail">Email address</label>
+          <input id="newsEmail" type="email" placeholder="Email address" required autocomplete="email" />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="news__status" id="newsStatus" role="status" aria-live="polite"></p></section>
+  </main>
+
+  <footer class="ga-foot wrap"><span>© <span id="year"></span> still. — demo store</span><span>Not intended to diagnose, treat, cure or prevent any disease.</span></footer>
+
+  <!--SWITCHER-->
+  <nav class="switcher" aria-label="Design options">
+    <a href="../min2/index.html" aria-label="Previous design">‹</a>
+    <a class="switcher__label" href="../designs.html">Gallery <span>4/6</span></a>
+    <a href="../min4/index.html" aria-label="Next design">›</a>
+  </nav>
+  <!--/SWITCHER-->
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer__head">
+      <h2>Bag</h2>
+      <button class="text-btn" data-close-drawer>Close</button>
+    </div>
+    <div class="drawer__body" id="cartBody"></div>
+    <div class="drawer__foot">
+      <p class="ship" id="shipText"></p>
+      <div class="drawer__row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+      <button class="btn" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal__panel">
+      <button class="text-btn modal__close" aria-label="Close">Close</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>window.STORE_THEME = {"layout": "grid", "colors": {"magnesium": ["#fbf8f5", "#2f4b3a"], "ashwagandha": ["#2f4b3a", "#c9a24b"], "collagen": ["#e2b9ac", "#2f4b3a"], "body-oil": ["#c98f84", "#2f4b3a"], "matcha": ["#6f8f6a", "#fbf8f5"], "turmeric": ["#c9a24b", "#2f4b3a"], "sleep-tea": ["#d9b7ae", "#6f8f6a"], "face-oil": ["#a8665c", "#2f4b3a"]}, "ink": ["#fbf8f5", "#22362a"]};</script>
+  <script src="../minimal/app.js"></script>
+  <script>
+    document.querySelectorAll("[data-scroll]").forEach((b) => b.addEventListener("click", () => {
+      const track = document.getElementById("grid"), card = track.querySelector(".card");
+      const step = card ? card.getBoundingClientRect().width + 24 : 320;
+      track.scrollBy({ left: step * Number(b.dataset.scroll), behavior: "smooth" });
+    }));
+  </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>still. — Daily wellness essentials</title>
+  <meta name="description" content="still. — a small range of honest wellness essentials for body and mind. (Demo store)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../minimal/styles.css" />
+  <link rel="stylesheet" href="layout.css" />
+</head>
+<body>
+  <header class="be-nav" id="nav">
+    <div class="be-pill">
+      <a href="#top" class="be-logo">still.</a>
+      <nav class="be-links" aria-label="Primary"><a href="#shop">Shop</a><a href="#about">About</a><a href="#faq">FAQ</a></nav>
+      <button class="be-bag" data-open-cart>Bag <span data-cart-count>0</span></button>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="be-hero">
+      <div class="be-box be-box--hero c-sage">
+        <span class="be-tag">Natural wellness</span>
+        <h1>Daily essentials for body and mind.</h1>
+        <p>Eight products. Short ingredient lists. Nothing you don’t need.</p>
+        <a href="#shop" class="be-btn">Shop all →</a>
+      </div>
+      <div class="be-box be-box--art" id="heroArt" aria-hidden="true"></div>
+      <div class="be-box c-butter be-stat"><b>4.9★</b><span>from 2,400 reviews</span></div>
+      <div class="be-box c-blush be-stat"><b>$60</b><span>free shipping over</span></div>
+    </section>
+
+    <!-- ✏️ ABOUT THE COMPANY — replace the text in the next section with your own story: what the company is and what it provides. -->
+    <section class="be-sec" id="about">
+      <div class="be-about">
+        <div class="be-box c-white be-about__main"><span class="be-tag be-tag--dark">About us</span><h2>still. is a small wellness company making simple, natural essentials for everyday calm, rest and care.</h2></div>
+        <div class="be-box c-sage"><h3>Who we are</h3><p>Founded in 2026, we are a small team of herbalists, nutritionists and designers who believe wellness shouldn’t be complicated. Every product starts with one question: what does the body actually need?</p></div>
+        <div class="be-box c-blush"><h3>What we provide</h3><ul><li>Plant-based supplements for focus, calm and sleep</li><li>Botanical oils for body and face</li><li>Loose-leaf teas and daily powders</li><li>Refills in compostable packaging</li></ul></div>
+        <div class="be-box c-lav"><h3>Our promise</h3><p>Natural ingredients, listed in full on the front of every pack. Independent lab testing on every batch. Free returns within 30 days.</p></div>
+      </div>
+    </section>
+
+    <section class="be-sec" id="shop">
+      <div class="be-head"><h2>Shop</h2><div class="filters be-filters" id="filters" role="tablist" aria-label="Filter by category"></div></div>
+      <div class="be-grid" id="grid"></div>
+    </section>
+
+    <section class="be-sec be-two" id="faq">
+      <div class="be-box c-white"><h2>FAQ</h2><div class="faq__list"><details><summary>How long does shipping take?</summary><p>Orders ship within two working days. Shipping is free over $60.</p></details><details><summary>Can I return a product?</summary><p>Unopened products can be returned within 30 days for a full refund.</p></details><details><summary>Are your products vegan?</summary><p>Everything except Collagen is vegan. Each product page lists its ingredients.</p></details><details><summary>Is this a real store?</summary><p>No — still. is a fictional demo store. No payments are taken and nothing ships.</p></details></div></div>
+      <div class="be-box c-lav be-news"><span class="be-tag">Newsletter</span><h2>Notes, occasionally.</h2><form class="news__form" id="newsForm" novalidate>
+          <label class="sr-only" for="newsEmail">Email address</label>
+          <input id="newsEmail" type="email" placeholder="Email address" required autocomplete="email" />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="news__status" id="newsStatus" role="status" aria-live="polite"></p></div>
+    </section>
+  </main>
+
+  <footer class="be-foot wrap"><span>© <span id="year"></span> still. — demo store</span><span>Not intended to diagnose, treat, cure or prevent any disease.</span></footer>
+
+  <!--SWITCHER-->
+  <nav class="switcher" aria-label="Design options">
+    <a href="../min4/index.html" aria-label="Previous design">‹</a>
+    <a class="switcher__label" href="../designs.html">Bento <span>6/6</span></a>
+    <a href="../minimal/index.html" aria-label="Next design">›</a>
+  </nav>
+  <!--/SWITCHER-->
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer__head">
+      <h2>Bag</h2>
+      <button class="text-btn" data-close-drawer>Close</button>
+    </div>
+    <div class="drawer__body" id="cartBody"></div>
+    <div class="drawer__foot">
+      <p class="ship" id="shipText"></p>
+      <div class="drawer__row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+      <button class="btn" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal__panel">
+      <button class="text-btn modal__close" aria-label="Close">Close</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>window.STORE_THEME = {"layout": "grid", "colors": {"magnesium": ["#ffffff", "#2d2a32"], "ashwagandha": ["#6b5b8c", "#2d2a32"], "collagen": ["#f3c9b8", "#2d2a32"], "body-oil": ["#b9a6d6", "#2d2a32"], "matcha": ["#8fb08a", "#ffffff"], "turmeric": ["#e8b84a", "#2d2a32"], "sleep-tea": ["#c9d8c2", "#6b5b8c"], "face-oil": ["#d98f7f", "#2d2a32"]}, "ink": ["#ffffff", "#2d2a32"]};</script>
+  <script src="../minimal/app.js"></script>
+</body>
+</html>

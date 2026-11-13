@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>still. — Daily wellness essentials</title>
+  <meta name="description" content="still. — a small range of honest wellness essentials for body and mind. (Demo store)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../minimal/styles.css" />
+  <link rel="stylesheet" href="layout.css" />
+</head>
+<body>
+  <div class="sp">
+    <aside class="sp-side" id="nav">
+      <div class="sp-side__top"><a href="#top" class="sp-logo">still.</a><button class="bag" data-open-cart>Bag (<span data-cart-count>0</span>)</button></div>
+      <div>
+        <h1>Daily essentials for body and mind.</h1>
+        <p class="sp-lead">Eight products. Short ingredient lists. Nothing you don’t need.</p>
+        <nav class="sp-links" aria-label="Primary">
+          <a href="#about"><span>01</span>About</a><a href="#shop"><span>02</span>Shop</a><a href="#faq"><span>03</span>FAQ</a><a href="#letters"><span>04</span>Newsletter</a>
+        </nav>
+      </div>
+      <p class="sp-side__foot">Free shipping over $60 · Demo store</p>
+    </aside>
+
+    <main class="sp-main" id="top">
+      <section class="sp-hero">
+        <div class="sp-hero__art" id="heroArt" aria-hidden="true"></div>
+        <p class="sp-caption">The everyday collection — 2026</p>
+      </section>
+
+      <!-- ✏️ ABOUT THE COMPANY — replace the text in the next section with your own story: what the company is and what it provides. -->
+      <section class="sp-sec" id="about">
+        <p class="kicker">About us</p>
+        <h2 class="sp-title">still. is a small wellness company making simple, natural essentials for everyday calm, rest and care.</h2>
+        <div class="sp-cards">
+          <div class="sp-card"><span>Who we are</span><p>Founded in 2026, we are a small team of herbalists, nutritionists and designers who believe wellness shouldn’t be complicated. Every product starts with one question: what does the body actually need?</p></div>
+          <div class="sp-card"><span>What we provide</span><ul><li>Plant-based supplements for focus, calm and sleep</li><li>Botanical oils for body and face</li><li>Loose-leaf teas and daily powders</li><li>Refills in compostable packaging</li></ul></div>
+          <div class="sp-card sp-card--accent"><span>Our promise</span><p>Natural ingredients, listed in full on the front of every pack. Independent lab testing on every batch. Free returns within 30 days.</p></div>
+        </div>
+      </section>
+
+      <section class="sp-sec" id="shop">
+        <div class="sp-head"><h2 class="sp-title">Shop</h2><div class="filters" id="filters" role="tablist" aria-label="Filter by category"></div></div>
+        <div class="sp-grid" id="grid"></div>
+      </section>
+
+      <section class="sp-sec" id="faq"><h2 class="sp-title">FAQ</h2><div class="faq__list"><details><summary>How long does shipping take?</summary><p>Orders ship within two working days. Shipping is free over $60.</p></details><details><summary>Can I return a product?</summary><p>Unopened products can be returned within 30 days for a full refund.</p></details><details><summary>Are your products vegan?</summary><p>Everything except Collagen is vegan. Each product page lists its ingredients.</p></details><details><summary>Is this a real store?</summary><p>No — still. is a fictional demo store. No payments are taken and nothing ships.</p></details></div></section>
+
+      <section class="sp-sec" id="letters"><h2 class="sp-title">Notes, occasionally.</h2><form class="news__form" id="newsForm" novalidate>
+          <label class="sr-only" for="newsEmail">Email address</label>
+          <input id="newsEmail" type="email" placeholder="Email address" required autocomplete="email" />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="news__status" id="newsStatus" role="status" aria-live="polite"></p></section>
+
+      <footer class="sp-foot"><span>© <span id="year"></span> still. — demo store</span><span>Not intended to diagnose, treat, cure or prevent any disease.</span></footer>
+    </main>
+  </div>
+
+  <!--SWITCHER-->
+  <nav class="switcher" aria-label="Design options">
+    <a href="../min1/index.html" aria-label="Previous design">‹</a>
+    <a class="switcher__label" href="../designs.html">Split screen <span>3/6</span></a>
+    <a href="../min3/index.html" aria-label="Next design">›</a>
+  </nav>
+  <!--/SWITCHER-->
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer__head">
+      <h2>Bag</h2>
+      <button class="text-btn" data-close-drawer>Close</button>
+    </div>
+    <div class="drawer__body" id="cartBody"></div>
+    <div class="drawer__foot">
+      <p class="ship" id="shipText"></p>
+      <div class="drawer__row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+      <button class="btn" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal__panel">
+      <button class="text-btn modal__close" aria-label="Close">Close</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>window.STORE_THEME = {"layout": "grid", "colors": {"magnesium": ["#ffffff", "#1c2833"], "ashwagandha": ["#3d5a73", "#1c2833"], "collagen": ["#c9d6df", "#3d5a73"], "body-oil": ["#8fa8bb", "#1c2833"], "matcha": ["#6f8f86", "#f3f5f6"], "turmeric": ["#e9c46a", "#1c2833"], "sleep-tea": ["#b7c4cf", "#3d5a73"], "face-oil": ["#1c2833", "#e9c46a"]}, "ink": ["#f3f5f6", "#1c2833"]};</script>
+  <script src="../minimal/app.js"></script>
+</body>
+</html>

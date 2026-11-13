@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>still. — Daily wellness essentials</title>
+  <meta name="description" content="still. — a small range of honest wellness essentials for body and mind. (Demo store)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../minimal/styles.css" />
+  <link rel="stylesheet" href="layout.css" />
+</head>
+<body>
+  <header class="ed-nav" id="nav">
+    <div class="wrap ed-nav__top">
+      <span class="ed-issue">Issue No. 01 — 2026</span>
+      <a href="#top" class="ed-logo">still.</a>
+      <button class="bag" data-open-cart>Bag (<span data-cart-count>0</span>)</button>
+    </div>
+    <nav class="wrap ed-nav__links" aria-label="Primary"><a href="#shop">The edit</a><a href="#about">About</a><a href="#faq">Questions</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="ed-hero wrap">
+      <h1 class="ed-hero__title">The quiet art<br />of <em>feeling well.</em></h1>
+      <div class="ed-hero__row">
+        <div class="ed-hero__text">
+          <p class="ed-dropcap">Eight honest essentials for body and mind — short ingredient lists, natural origins, and nothing you don’t need. A small collection, made carefully.</p>
+          <a href="#shop" class="arrow-link">Read the edit <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="ed-hero__art" id="heroArt" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ✏️ ABOUT THE COMPANY — replace the text in the next section with your own story: what the company is and what it provides. -->
+    <section class="ed-section wrap" id="about">
+      <p class="ed-chapter">Chapter I — About us</p>
+      <h2 class="ed-title">still. is a small wellness company making simple, natural essentials for everyday calm, rest and care.</h2>
+      <div class="ed-columns">
+        <p class="ed-dropcap">Founded in 2026, we are a small team of herbalists, nutritionists and designers who believe wellness shouldn’t be complicated. Every product starts with one question: what does the body actually need?</p>
+        <blockquote class="ed-pull">“Wellness shouldn’t be complicated.”</blockquote>
+        <p><strong>What we provide.</strong> Plant-based supplements for focus, calm and sleep; Botanical oils for body and face; Loose-leaf teas and daily powders; Refills in compostable packaging.</p>
+        <p><strong>Our promise.</strong> Natural ingredients, listed in full on the front of every pack. Independent lab testing on every batch. Free returns within 30 days.</p>
+      </div>
+    </section>
+
+    <section class="ed-section wrap" id="shop">
+      <div class="ed-head">
+        <div><p class="ed-chapter">Chapter II — The edit</p><h2 class="ed-title">Eight essentials</h2></div>
+        <div class="filters ed-filters" id="filters" role="tablist" aria-label="Filter by category"></div>
+      </div>
+      <div class="ed-list" id="grid"></div>
+    </section>
+
+    <section class="ed-section wrap" id="faq">
+      <p class="ed-chapter">Chapter III — Questions</p>
+      <div class="ed-faq"><div><h3>How long does shipping take?</h3><p>Orders ship within two working days. Shipping is free over $60.</p></div><div><h3>Can I return a product?</h3><p>Unopened products can be returned within 30 days for a full refund.</p></div><div><h3>Are your products vegan?</h3><p>Everything except Collagen is vegan. Each product page lists its ingredients.</p></div><div><h3>Is this a real store?</h3><p>No — still. is a fictional demo store. No payments are taken and nothing ships.</p></div></div>
+    </section>
+
+    <section class="ed-section ed-letters wrap">
+      <h2 class="ed-title">Letters from the studio</h2>
+      <p>Occasional notes on seasons, rituals and new harvests.</p>
+      <form class="news__form" id="newsForm" novalidate>
+          <label class="sr-only" for="newsEmail">Email address</label>
+          <input id="newsEmail" type="email" placeholder="Email address" required autocomplete="email" />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="news__status" id="newsStatus" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="ed-foot wrap"><span>© <span id="year"></span> still. — demo store</span><span>Not intended to diagnose, treat, cure or prevent any disease.</span></footer>
+
+  <!--SWITCHER-->
+  <nav class="switcher" aria-label="Design options">
+    <a href="../minimal/index.html" aria-label="Previous design">‹</a>
+    <a class="switcher__label" href="../designs.html">Editorial <span>2/6</span></a>
+    <a href="../min2/index.html" aria-label="Next design">›</a>
+  </nav>
+  <!--/SWITCHER-->
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer__head">
+      <h2>Bag</h2>
+      <button class="text-btn" data-close-drawer>Close</button>
+    </div>
+    <div class="drawer__body" id="cartBody"></div>
+    <div class="drawer__foot">
+      <p class="ship" id="shipText"></p>
+      <div class="drawer__row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+      <button class="btn" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal__panel">
+      <button class="text-btn modal__close" aria-label="Close">Close</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>window.STORE_THEME = {"layout": "list", "colors": {"magnesium": ["#d9b49a", "#3a2a20"], "ashwagandha": ["#b5562f", "#3a2a20"], "collagen": ["#f5ece0", "#b5562f"], "body-oil": ["#8a5a3c", "#3a2a20"], "matcha": ["#7d8150", "#f5ece0"], "turmeric": ["#d08a3e", "#3a2a20"], "sleep-tea": ["#c9a88c", "#6b7045"], "face-oil": ["#a2492b", "#3a2a20"]}, "ink": ["#fff8f0", "#3a2a20"]};</script>
+  <script src="../minimal/app.js"></script>
+</body>
+</html>
